@@ -1,3 +1,19 @@
+# Réalisation d'un slider en React
+Petit projet de slider classique en React avec des flêches directionnelles, une petite animation avec des points en bas du slider.
+
+## Ajout des packages
+une fois dans le répertoire, faire :
+
+    - npm init
+
+pour installer des packages du projet puis :
+
+    -npm start
+    
+pour lancer le localhost.
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
