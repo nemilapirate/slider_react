@@ -11,11 +11,38 @@ export default function Slider() {
     })
 
     const nextSlide = () => {
+        if(slideAnim.index !== dataSlider.length && !slideAnim.inProgress) {
+            setSlideAnim({index: slideAnim.index +1, inProgress: true})
 
+            setTimeout(() => {
+                setSlideAnim({index: slideAnim.index +1, inProgress: false && !slideAnim.inProgress})
+                }, 300)
+
+        } else if (slideAnim.index === dataSlider.length){
+            setSlideAnim({index: 1, inProgress: true})
+
+            setTimeout(() => {
+                setSlideAnim({index: 1, inProgress: false && !slideAnim.inProgress})
+                }, 300)
+           
+        }
     }
 
     const prevSlide = () => {
+        if(slideAnim.index !== 1) {
+            setSlideAnim({index: slideAnim.index -1, inProgress: true && !slideAnim.inProgress})
 
+            setTimeout(() => {
+                setSlideAnim({index: slideAnim.index -1, inProgress: false})
+                }, 300)
+
+        } else if (slideAnim.index === 1){
+            setSlideAnim({index: 5, inProgress: true && !slideAnim.inProgress})
+
+            setTimeout(() => {
+                setSlideAnim({index: 5, inProgress: false && !slideAnim.inProgress})
+                }, 300)
+        }
     }
   return (
     <div className='container-slider'>
